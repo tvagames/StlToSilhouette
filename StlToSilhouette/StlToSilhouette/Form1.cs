@@ -77,7 +77,7 @@ namespace StlToSilhouette
                     return;
                 }
                 var path = Path.Combine(this.rootDirInput.Text, this.fileListInput.SelectedItem.ToString());
-                var imgPath = Path.Combine(this.outputDirInput.Text, this.fileListInput.SelectedItem.ToString() + ".bmp");
+                var imgPath = Path.Combine(this.outputDirInput.Text, this.fileListInput.SelectedItem.ToString() + ".png");
 
                 var font1 = this.fontSample1.Font;
                 var font2 = this.fontSample2.Font;
