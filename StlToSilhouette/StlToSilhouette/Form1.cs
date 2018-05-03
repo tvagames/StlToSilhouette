@@ -55,6 +55,11 @@ namespace StlToSilhouette
 
         private void rootDirInput_TextChanged(object sender, EventArgs e)
         {
+            this.ShowList();
+        }
+
+        private void ShowList()
+        {
             var di = new DirectoryInfo(this.rootDirInput.Text);
             if (!di.Exists)
             {
@@ -199,5 +204,9 @@ namespace StlToSilhouette
             this.config.Save();
         }
 
+        private void reloadButton_Click(object sender, EventArgs e)
+        {
+            this.ShowList();
+        }
     }
 }

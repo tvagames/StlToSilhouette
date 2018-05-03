@@ -87,7 +87,15 @@ namespace StlToSilhouette
                 int canvasheight = Convert.ToInt32(h * zoomY);
                 var fi = new FileInfo(filePath);
                 var filename = fi.Name;
-                var fn = filename.Substring(0, filename.Length - 31);
+                var fn = "";
+                if (filename.Length <= "text-yyyy-mm-dd_hh-mm-ss-PM.stl".Length)
+                {
+                    fn = filename;
+                }
+                else
+                {
+                    fn = filename.Substring(0, filename.Length - 31);
+                }
 
                 using (var bmp = new System.Drawing.Bitmap(canvaswidth, canvasheight))
                 {
@@ -230,7 +238,8 @@ namespace StlToSilhouette
             }
             catch (Exception ex)
             {
-                throw ex;
+                Console.WriteLine(ex.ToString());
+                throw new Exception("Load error", ex);
             }
         }
     }

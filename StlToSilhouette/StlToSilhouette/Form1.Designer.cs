@@ -60,6 +60,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.polygonCount = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.reloadButton = new System.Windows.Forms.Button();
             this.framePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.canvas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.zoomInput)).BeginInit();
@@ -105,7 +106,7 @@
             this.fileListInput.ItemHeight = 12;
             this.fileListInput.Location = new System.Drawing.Point(16, 154);
             this.fileListInput.Name = "fileListInput";
-            this.fileListInput.Size = new System.Drawing.Size(201, 364);
+            this.fileListInput.Size = new System.Drawing.Size(201, 352);
             this.fileListInput.TabIndex = 3;
             this.fileListInput.SelectedIndexChanged += new System.EventHandler(this.fileListInput_SelectedIndexChanged);
             // 
@@ -133,7 +134,7 @@
             // progress
             // 
             this.progress.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.progress.Location = new System.Drawing.Point(16, 545);
+            this.progress.Location = new System.Drawing.Point(12, 555);
             this.progress.Name = "progress";
             this.progress.Size = new System.Drawing.Size(201, 23);
             this.progress.TabIndex = 5;
@@ -228,7 +229,7 @@
             // 
             this.progresText.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.progresText.AutoSize = true;
-            this.progresText.Location = new System.Drawing.Point(14, 530);
+            this.progresText.Location = new System.Drawing.Point(13, 540);
             this.progresText.Name = "progresText";
             this.progresText.Size = new System.Drawing.Size(49, 12);
             this.progresText.TabIndex = 1;
@@ -324,7 +325,7 @@
             // 
             this.polygonCount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.polygonCount.AutoSize = true;
-            this.polygonCount.Location = new System.Drawing.Point(14, 581);
+            this.polygonCount.Location = new System.Drawing.Point(12, 594);
             this.polygonCount.Name = "polygonCount";
             this.polygonCount.Size = new System.Drawing.Size(57, 12);
             this.polygonCount.TabIndex = 1;
@@ -345,11 +346,22 @@
             this.flowLayoutPanel1.Size = new System.Drawing.Size(906, 58);
             this.flowLayoutPanel1.TabIndex = 10;
             // 
+            // reloadButton
+            // 
+            this.reloadButton.Location = new System.Drawing.Point(142, 512);
+            this.reloadButton.Name = "reloadButton";
+            this.reloadButton.Size = new System.Drawing.Size(75, 23);
+            this.reloadButton.TabIndex = 11;
+            this.reloadButton.Text = "reload";
+            this.reloadButton.UseVisualStyleBackColor = true;
+            this.reloadButton.Click += new System.EventHandler(this.reloadButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(933, 618);
+            this.Controls.Add(this.reloadButton);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.colorSample);
             this.Controls.Add(this.colorInput);
@@ -420,6 +432,7 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label polygonCount;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.Button reloadButton;
     }
 }
 
